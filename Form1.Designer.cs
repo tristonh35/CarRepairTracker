@@ -28,12 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.addVehicleBtn = new System.Windows.Forms.Button();
+            this.addServiceBtn = new System.Windows.Forms.Button();
+            this.currReportBtn = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // addVehicleBtn
+            // 
+            this.addVehicleBtn.Location = new System.Drawing.Point(287, 54);
+            this.addVehicleBtn.Name = "addVehicleBtn";
+            this.addVehicleBtn.Size = new System.Drawing.Size(185, 96);
+            this.addVehicleBtn.TabIndex = 0;
+            this.addVehicleBtn.Text = "Add Vehicle";
+            this.addVehicleBtn.UseVisualStyleBackColor = true;
+            // 
+            // addServiceBtn
+            // 
+            this.addServiceBtn.Location = new System.Drawing.Point(287, 185);
+            this.addServiceBtn.Name = "addServiceBtn";
+            this.addServiceBtn.Size = new System.Drawing.Size(185, 96);
+            this.addServiceBtn.TabIndex = 1;
+            this.addServiceBtn.Text = "Add Service Report";
+            this.addServiceBtn.UseVisualStyleBackColor = true;
+            // 
+            // currReportBtn
+            // 
+            this.currReportBtn.Location = new System.Drawing.Point(287, 322);
+            this.currReportBtn.Name = "currReportBtn";
+            this.currReportBtn.Size = new System.Drawing.Size(185, 96);
+            this.currReportBtn.TabIndex = 2;
+            this.currReportBtn.Text = "View Current Vehicles/Service History";
+            this.currReportBtn.UseVisualStyleBackColor = true;
+            this.currReportBtn.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // Form1
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Controls.Add(this.currReportBtn);
+            this.Controls.Add(this.addServiceBtn);
+            this.Controls.Add(this.addVehicleBtn);
+            this.Name = "Form1";
+            this.Text = "Vehicle Repair Tracker";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private Button addVehicleBtn;
+        private Button addServiceBtn;
+        private Button currReportBtn;
     }
 }
