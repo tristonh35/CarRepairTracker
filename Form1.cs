@@ -22,5 +22,10 @@ namespace CarRepairTracker
             AddVehicle addVehicle = new AddVehicle();
             addVehicle.Show();
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

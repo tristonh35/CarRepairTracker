@@ -77,11 +77,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.currReportBtn);
             this.Controls.Add(this.addServiceBtn);
             this.Controls.Add(this.addVehicleBtn);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
             this.Text = "Vehicle Repair Tracker";
             this.ResumeLayout(false);
