@@ -42,6 +42,7 @@
             this.addVehicleBtn.TabIndex = 0;
             this.addVehicleBtn.Text = "Add Vehicle";
             this.addVehicleBtn.UseVisualStyleBackColor = true;
+            this.addVehicleBtn.Click += new System.EventHandler(this.addVehicleBtn_Click);
             // 
             // addServiceBtn
             // 

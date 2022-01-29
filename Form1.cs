@@ -16,5 +16,11 @@ namespace CarRepairTracker
         {
             this.Close();
         }
+
+        private void addVehicleBtn_Click(object sender, EventArgs e)
+        {
+            AddVehicle addVehicle = new AddVehicle();
+            addVehicle.Show();
+        }
     }
 }
