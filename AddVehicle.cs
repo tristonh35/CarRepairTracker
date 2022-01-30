@@ -36,7 +36,7 @@ namespace CarRepairTracker
         {
             checkBox1.Text = "Civic";
             checkBox2.Text = "Accord";
-            checkBox3.Text = "S-2000";
+            checkBox3.Text = "Odyssey";
             checkBox4.Text = "CR-V";
 
             checkBox1.Checked = false;
@@ -50,7 +50,7 @@ namespace CarRepairTracker
             checkBox1.Text = "Mazda 3";
             checkBox2.Text = "Mx-5 Miata";
             checkBox3.Text = "Cx-5";
-            checkBox4.Text = "Rx-8";
+            checkBox4.Text = "Cx-9";
 
             checkBox1.Checked = false;
             checkBox2.Checked = false;

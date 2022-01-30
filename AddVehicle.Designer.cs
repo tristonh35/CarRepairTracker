@@ -85,8 +85,19 @@
             // 
             // CBYear
             // 
+            this.CBYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.CBYear.FormattingEnabled = true;
+            this.CBYear.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
             this.CBYear.Location = new System.Drawing.Point(210, 79);
+            this.CBYear.MaxDropDownItems = 22;
+            this.CBYear.MaxLength = 4;
             this.CBYear.Name = "CBYear";
             this.CBYear.Size = new System.Drawing.Size(121, 23);
             this.CBYear.TabIndex = 4;
@@ -243,7 +254,6 @@
         private Label makeLabel;
         private Label modelLabel;
         private Label vinLabel;
-        private ComboBox CBYear;
         private RadioButton RdbHonda;
         private RadioButton RdbSubaru;
         private RadioButton RdbToyota;
@@ -255,5 +265,6 @@
         private CheckBox checkBox2;
         private CheckBox checkBox3;
         private CheckBox checkBox4;
+        private ComboBox CBYear;
     }
 }
