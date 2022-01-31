@@ -7,7 +7,11 @@ using System.Threading.Tasks;
 namespace CarRepairTracker
 {
     public class Vehicle
-    {
+    {   
+        /// <summary>
+        /// No arg constructor for the vehicle class
+        /// </summary>
+        public Vehicle() { }
         /// <summary>
         /// Represents the make of the vehicle
         /// </summary>
