@@ -39,7 +39,7 @@
             this.RdbNissan = new System.Windows.Forms.RadioButton();
             this.RdbMazda = new System.Windows.Forms.RadioButton();
             this.TxtVin = new System.Windows.Forms.TextBox();
-            this.BtnSumbit = new System.Windows.Forms.Button();
+            this.BtnSubmit = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -170,14 +170,15 @@
             this.TxtVin.Size = new System.Drawing.Size(254, 23);
             this.TxtVin.TabIndex = 10;
             // 
-            // BtnSumbit
+            // BtnSubmit
             // 
-            this.BtnSumbit.Location = new System.Drawing.Point(213, 179);
-            this.BtnSumbit.Name = "BtnSumbit";
-            this.BtnSumbit.Size = new System.Drawing.Size(254, 72);
-            this.BtnSumbit.TabIndex = 15;
-            this.BtnSumbit.Text = "Submit Data";
-            this.BtnSumbit.UseVisualStyleBackColor = true;
+            this.BtnSubmit.Location = new System.Drawing.Point(213, 179);
+            this.BtnSubmit.Name = "BtnSubmit";
+            this.BtnSubmit.Size = new System.Drawing.Size(254, 72);
+            this.BtnSubmit.TabIndex = 15;
+            this.BtnSubmit.Text = "Submit Data";
+            this.BtnSubmit.UseVisualStyleBackColor = true;
+            this.BtnSubmit.Click += new System.EventHandler(this.BtnSubmit_Click);
             // 
             // checkBox1
             // 
@@ -229,7 +230,7 @@
             this.Controls.Add(this.checkBox3);
             this.Controls.Add(this.checkBox2);
             this.Controls.Add(this.checkBox1);
-            this.Controls.Add(this.BtnSumbit);
+            this.Controls.Add(this.BtnSubmit);
             this.Controls.Add(this.TxtVin);
             this.Controls.Add(this.RdbMazda);
             this.Controls.Add(this.RdbNissan);
@@ -260,7 +261,7 @@
         private RadioButton RdbNissan;
         private RadioButton RdbMazda;
         private TextBox TxtVin;
-        private Button BtnSumbit;
+        private Button BtnSubmit;
         private CheckBox checkBox1;
         private CheckBox checkBox2;
         private CheckBox checkBox3;

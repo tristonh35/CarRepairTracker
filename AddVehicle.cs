@@ -136,5 +136,31 @@ namespace CarRepairTracker
                 checkBox3.Checked = false;
             }
         }
+
+        private void BtnSubmit_Click(object sender, EventArgs e)
+        {
+            Vehicle vehicle = new Vehicle();
+            if(checkBox1.Checked == true)
+            {
+                vehicle.Model = checkBox1.Text;
+            }
+            if(checkBox2.Checked == true)
+            {
+                vehicle.Model = checkBox2.Text;
+            }
+            if (checkBox3.Checked == true)
+            {
+                vehicle.Model = checkBox3.Text;
+            }
+            if (checkBox4.Checked == true)
+            {
+                vehicle.Model = checkBox4.Text;
+            }
+
+            vehicle.VIN = TxtVin.Text;
+
+
+
+        }
     }
 }
