@@ -156,8 +156,13 @@ namespace CarRepairTracker
             {
                 vehicle.Model = checkBox4.Text;
             }
-
-            vehicle.VIN = TxtVin.Text;
+            int length = TxtVin.Text.Length;
+            
+            if (length !< 17)
+            {
+                vehicle.VIN = TxtVin.Text;
+            }
+            
             if (RdbHonda.Checked == true)
             {
                 vehicle.Make = RdbHonda.Text;
