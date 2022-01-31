@@ -157,10 +157,15 @@ namespace CarRepairTracker
                 vehicle.Model = checkBox4.Text;
             }
             int length = TxtVin.Text.Length;
-            
-            if (length !< 17)
+
+            if (length == 17)
             {
+                BtnSubmit.Enabled = true;
                 vehicle.VIN = TxtVin.Text;
+            }
+            if (length > 17 || length < 17)
+            {
+                BtnSubmit.Enabled = false;
             }
             
             if (RdbHonda.Checked == true)
@@ -184,7 +189,24 @@ namespace CarRepairTracker
                 vehicle.Make = RdbNissan.Text;
             }
 
+            if (CBYear.Text == "")
+            {
+                BtnSubmit.Enabled = false;
+            }
+            if (CBYear.Text != "")
+            {
+                vehicle.Year = Convert.ToInt32(CBYear.Text);
+            }
 
+        }
+
+        private void TxtVin_TextChanged(object sender, EventArgs e)
+        {
+            int length = TxtVin.Text.Length;
+            if (length == 17)
+            {
+                BtnSubmit.Enabled = true;
+            }
         }
     }
 }
