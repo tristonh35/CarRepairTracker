@@ -32,17 +32,25 @@
             this.makeLabel = new System.Windows.Forms.Label();
             this.modelLabel = new System.Windows.Forms.Label();
             this.vinLabel = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.CBYear = new System.Windows.Forms.ComboBox();
+            this.RdbHonda = new System.Windows.Forms.RadioButton();
+            this.RdbSubaru = new System.Windows.Forms.RadioButton();
+            this.RdbToyota = new System.Windows.Forms.RadioButton();
+            this.RdbNissan = new System.Windows.Forms.RadioButton();
+            this.RdbMazda = new System.Windows.Forms.RadioButton();
+            this.TxtVin = new System.Windows.Forms.TextBox();
+            this.BtnSumbit = new System.Windows.Forms.Button();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.checkBox3 = new System.Windows.Forms.CheckBox();
+            this.checkBox4 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // yearLabel
             // 
             this.yearLabel.AutoSize = true;
             this.yearLabel.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.yearLabel.Location = new System.Drawing.Point(252, 85);
+            this.yearLabel.Location = new System.Drawing.Point(210, 33);
             this.yearLabel.Name = "yearLabel";
             this.yearLabel.Size = new System.Drawing.Size(29, 15);
             this.yearLabel.TabIndex = 0;
@@ -51,7 +59,7 @@
             // makeLabel
             // 
             this.makeLabel.AutoSize = true;
-            this.makeLabel.Location = new System.Drawing.Point(252, 126);
+            this.makeLabel.Location = new System.Drawing.Point(27, 33);
             this.makeLabel.Name = "makeLabel";
             this.makeLabel.Size = new System.Drawing.Size(36, 15);
             this.makeLabel.TabIndex = 1;
@@ -60,7 +68,7 @@
             // modelLabel
             // 
             this.modelLabel.AutoSize = true;
-            this.modelLabel.Location = new System.Drawing.Point(252, 175);
+            this.modelLabel.Location = new System.Drawing.Point(108, 33);
             this.modelLabel.Name = "modelLabel";
             this.modelLabel.Size = new System.Drawing.Size(41, 15);
             this.modelLabel.TabIndex = 2;
@@ -69,52 +77,166 @@
             // vinLabel
             // 
             this.vinLabel.AutoSize = true;
-            this.vinLabel.Location = new System.Drawing.Point(255, 229);
+            this.vinLabel.Location = new System.Drawing.Point(213, 109);
             this.vinLabel.Name = "vinLabel";
             this.vinLabel.Size = new System.Drawing.Size(26, 15);
             this.vinLabel.TabIndex = 3;
             this.vinLabel.Text = "VIN";
             // 
-            // comboBox1
+            // CBYear
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(327, 77);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 4;
+            this.CBYear.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBYear.FormattingEnabled = true;
+            this.CBYear.Items.AddRange(new object[] {
+            "2016",
+            "2017",
+            "2018",
+            "2019",
+            "2020",
+            "2021",
+            "2022"});
+            this.CBYear.Location = new System.Drawing.Point(210, 79);
+            this.CBYear.MaxDropDownItems = 22;
+            this.CBYear.MaxLength = 4;
+            this.CBYear.Name = "CBYear";
+            this.CBYear.Size = new System.Drawing.Size(121, 23);
+            this.CBYear.TabIndex = 4;
+            this.CBYear.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // textBox1
+            // RdbHonda
             // 
-            this.textBox1.Location = new System.Drawing.Point(327, 118);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(121, 23);
-            this.textBox1.TabIndex = 5;
+            this.RdbHonda.AutoSize = true;
+            this.RdbHonda.Location = new System.Drawing.Point(27, 79);
+            this.RdbHonda.Name = "RdbHonda";
+            this.RdbHonda.Size = new System.Drawing.Size(61, 19);
+            this.RdbHonda.TabIndex = 5;
+            this.RdbHonda.TabStop = true;
+            this.RdbHonda.Text = "Honda";
+            this.RdbHonda.UseVisualStyleBackColor = true;
+            this.RdbHonda.CheckedChanged += new System.EventHandler(this.RdbHonda_CheckedChanged);
             // 
-            // textBox2
+            // RdbSubaru
             // 
-            this.textBox2.Location = new System.Drawing.Point(327, 167);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(121, 23);
-            this.textBox2.TabIndex = 6;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
+            this.RdbSubaru.AutoSize = true;
+            this.RdbSubaru.Location = new System.Drawing.Point(28, 154);
+            this.RdbSubaru.Name = "RdbSubaru";
+            this.RdbSubaru.Size = new System.Drawing.Size(62, 19);
+            this.RdbSubaru.TabIndex = 6;
+            this.RdbSubaru.TabStop = true;
+            this.RdbSubaru.Text = "Subaru";
+            this.RdbSubaru.UseVisualStyleBackColor = true;
+            this.RdbSubaru.CheckedChanged += new System.EventHandler(this.RdbSubaru_CheckedChanged);
             // 
-            // textBox3
+            // RdbToyota
             // 
-            this.textBox3.Location = new System.Drawing.Point(327, 226);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(213, 23);
-            this.textBox3.TabIndex = 7;
+            this.RdbToyota.AutoSize = true;
+            this.RdbToyota.Location = new System.Drawing.Point(28, 179);
+            this.RdbToyota.Name = "RdbToyota";
+            this.RdbToyota.Size = new System.Drawing.Size(60, 19);
+            this.RdbToyota.TabIndex = 7;
+            this.RdbToyota.TabStop = true;
+            this.RdbToyota.Text = "Toyota";
+            this.RdbToyota.UseVisualStyleBackColor = true;
+            this.RdbToyota.CheckedChanged += new System.EventHandler(this.RdbToyota_CheckedChanged);
+            // 
+            // RdbNissan
+            // 
+            this.RdbNissan.AutoSize = true;
+            this.RdbNissan.Location = new System.Drawing.Point(28, 129);
+            this.RdbNissan.Name = "RdbNissan";
+            this.RdbNissan.Size = new System.Drawing.Size(60, 19);
+            this.RdbNissan.TabIndex = 8;
+            this.RdbNissan.TabStop = true;
+            this.RdbNissan.Text = "Nissan";
+            this.RdbNissan.UseVisualStyleBackColor = true;
+            this.RdbNissan.CheckedChanged += new System.EventHandler(this.RdbNissan_CheckedChanged);
+            // 
+            // RdbMazda
+            // 
+            this.RdbMazda.AutoSize = true;
+            this.RdbMazda.Location = new System.Drawing.Point(28, 104);
+            this.RdbMazda.Name = "RdbMazda";
+            this.RdbMazda.Size = new System.Drawing.Size(60, 19);
+            this.RdbMazda.TabIndex = 9;
+            this.RdbMazda.TabStop = true;
+            this.RdbMazda.Text = "Mazda";
+            this.RdbMazda.UseVisualStyleBackColor = true;
+            this.RdbMazda.CheckedChanged += new System.EventHandler(this.RdbMazda_CheckedChanged);
+            // 
+            // TxtVin
+            // 
+            this.TxtVin.Location = new System.Drawing.Point(213, 134);
+            this.TxtVin.Name = "TxtVin";
+            this.TxtVin.Size = new System.Drawing.Size(254, 23);
+            this.TxtVin.TabIndex = 10;
+            // 
+            // BtnSumbit
+            // 
+            this.BtnSumbit.Location = new System.Drawing.Point(213, 179);
+            this.BtnSumbit.Name = "BtnSumbit";
+            this.BtnSumbit.Size = new System.Drawing.Size(254, 72);
+            this.BtnSumbit.TabIndex = 15;
+            this.BtnSumbit.Text = "Submit Data";
+            this.BtnSumbit.UseVisualStyleBackColor = true;
+            // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(108, 79);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(15, 14);
+            this.checkBox1.TabIndex = 16;
+            this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(108, 104);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(15, 14);
+            this.checkBox2.TabIndex = 17;
+            this.checkBox2.UseVisualStyleBackColor = true;
+            this.checkBox2.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
+            // 
+            // checkBox3
+            // 
+            this.checkBox3.AutoSize = true;
+            this.checkBox3.Location = new System.Drawing.Point(108, 129);
+            this.checkBox3.Name = "checkBox3";
+            this.checkBox3.Size = new System.Drawing.Size(15, 14);
+            this.checkBox3.TabIndex = 18;
+            this.checkBox3.UseVisualStyleBackColor = true;
+            this.checkBox3.CheckedChanged += new System.EventHandler(this.checkBox3_CheckedChanged);
+            // 
+            // checkBox4
+            // 
+            this.checkBox4.AutoSize = true;
+            this.checkBox4.Location = new System.Drawing.Point(108, 154);
+            this.checkBox4.Name = "checkBox4";
+            this.checkBox4.Size = new System.Drawing.Size(15, 14);
+            this.checkBox4.TabIndex = 19;
+            this.checkBox4.UseVisualStyleBackColor = true;
+            this.checkBox4.CheckedChanged += new System.EventHandler(this.checkBox4_CheckedChanged);
             // 
             // AddVehicle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlDark;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.comboBox1);
+            this.ClientSize = new System.Drawing.Size(486, 263);
+            this.Controls.Add(this.checkBox4);
+            this.Controls.Add(this.checkBox3);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.checkBox1);
+            this.Controls.Add(this.BtnSumbit);
+            this.Controls.Add(this.TxtVin);
+            this.Controls.Add(this.RdbMazda);
+            this.Controls.Add(this.RdbNissan);
+            this.Controls.Add(this.RdbToyota);
+            this.Controls.Add(this.RdbSubaru);
+            this.Controls.Add(this.RdbHonda);
+            this.Controls.Add(this.CBYear);
             this.Controls.Add(this.vinLabel);
             this.Controls.Add(this.modelLabel);
             this.Controls.Add(this.makeLabel);
@@ -132,9 +254,17 @@
         private Label makeLabel;
         private Label modelLabel;
         private Label vinLabel;
-        private ComboBox comboBox1;
-        private TextBox textBox1;
-        private TextBox textBox2;
-        private TextBox textBox3;
+        private RadioButton RdbHonda;
+        private RadioButton RdbSubaru;
+        private RadioButton RdbToyota;
+        private RadioButton RdbNissan;
+        private RadioButton RdbMazda;
+        private TextBox TxtVin;
+        private Button BtnSumbit;
+        private CheckBox checkBox1;
+        private CheckBox checkBox2;
+        private CheckBox checkBox3;
+        private CheckBox checkBox4;
+        private ComboBox CBYear;
     }
 }
