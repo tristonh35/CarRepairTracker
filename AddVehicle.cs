@@ -158,7 +158,26 @@ namespace CarRepairTracker
             }
 
             vehicle.VIN = TxtVin.Text;
-
+            if (RdbHonda.Checked == true)
+            {
+                vehicle.Make = RdbHonda.Text;
+            }
+            if (RdbToyota.Checked == true)
+            {
+                vehicle.Make = RdbToyota.Text;
+            }
+            if (RdbSubaru.Checked == true)
+            {
+                vehicle.Make = RdbSubaru.Text;
+            }
+            if (RdbMazda.Checked == true)
+            {
+                vehicle.Make = RdbMazda.Text;
+            }
+            if (RdbNissan.Checked == true)
+            {
+                vehicle.Make = RdbNissan.Text;
+            }
 
 
         }
