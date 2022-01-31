@@ -42,8 +42,44 @@ namespace CarRepairTracker
             
             
         }
+        /// <summary>
+        /// Method that gets the make of a vehicle
+        /// </summary>
+        /// <returns>@Make</returns>
+        public string getMake()
+        {
+            return Make;
+        }
+        /// <summary>
+        /// Method that gets the model of the vehicle
+        /// </summary>
+        /// <returns>@Model</returns>
+        public string getModel()
+        {
+            return Model;
+        }
+        /// <summary>
+        /// Method that gets the year of the vehicle
+        /// </summary>
+        /// <returns>@Year</returns>
+        public int getYear()
+        {
+            return Year;
+        }
+
+        /// <summary>
+        /// Method that gets the vin of a vehicle
+        /// </summary>
+        /// <returns>@VIN</returns>
+        public string getVin()
+        {
+            return VIN;
+        }
+
+
 
     }
+    
 
 
 
