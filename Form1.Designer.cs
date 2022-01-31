@@ -85,7 +85,7 @@
             this.Controls.Add(this.addVehicleBtn);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "Form1";
-            this.Text = "Vehicle Repair Tracker";
+            this.Text = "JDM Repair Tracker";
             this.ResumeLayout(false);
 
         }
