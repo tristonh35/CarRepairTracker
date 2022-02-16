@@ -31,5 +31,16 @@ namespace CarRepairTracker
         {
             this.Close();
         }
+
+        private void AddService_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            descriptionBox.Text = "";
+            serviceTitleBox.Text = "";
+        }
     }
 }

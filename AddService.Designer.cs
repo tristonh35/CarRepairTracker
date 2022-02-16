@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.addServiceBtn = new System.Windows.Forms.Button();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.descriptionBox = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.clearBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
@@ -49,13 +49,13 @@
             this.addServiceBtn.UseVisualStyleBackColor = true;
             this.addServiceBtn.Click += new System.EventHandler(this.addServiceBtn_Click);
             // 
-            // richTextBox1
+            // descriptionBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(277, 226);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(284, 96);
-            this.richTextBox1.TabIndex = 1;
-            this.richTextBox1.Text = "";
+            this.descriptionBox.Location = new System.Drawing.Point(277, 226);
+            this.descriptionBox.Name = "descriptionBox";
+            this.descriptionBox.Size = new System.Drawing.Size(284, 96);
+            this.descriptionBox.TabIndex = 1;
+            this.descriptionBox.Text = "";
             // 
             // label1
             // 
@@ -76,6 +76,7 @@
             this.clearBtn.TabIndex = 3;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = true;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // exitBtn
             // 
@@ -135,11 +136,12 @@
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clearBtn);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.richTextBox1);
+            this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.addServiceBtn);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AddService";
             this.Text = "Add Service";
+            this.Load += new System.EventHandler(this.AddService_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -148,7 +150,7 @@
         #endregion
 
         private Button addServiceBtn;
-        private RichTextBox richTextBox1;
+        private RichTextBox descriptionBox;
         private Label label1;
         private Button clearBtn;
         private Button exitBtn;
