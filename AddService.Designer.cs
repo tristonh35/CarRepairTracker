@@ -126,6 +126,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.GrayText;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.serviceTitleBox);
             this.Controls.Add(this.serviceTitle);
@@ -136,6 +137,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.addServiceBtn);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AddService";
             this.Text = "Add Service";
             this.ResumeLayout(false);
