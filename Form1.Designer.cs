@@ -52,6 +52,7 @@
             this.addServiceBtn.TabIndex = 1;
             this.addServiceBtn.Text = "Add Service Report";
             this.addServiceBtn.UseVisualStyleBackColor = true;
+            this.addServiceBtn.Click += new System.EventHandler(this.addServiceBtn_Click);
             // 
             // currReportBtn
             // 

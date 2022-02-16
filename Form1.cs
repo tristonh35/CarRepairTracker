@@ -27,5 +27,12 @@ namespace CarRepairTracker
         {
 
         }
+
+        private void addServiceBtn_Click(object sender, EventArgs e)
+        {
+            AddService addService = new AddService();
+            
+            addService.Show();
+        }
     }
 }
