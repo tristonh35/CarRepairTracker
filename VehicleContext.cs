@@ -15,7 +15,9 @@ namespace CarRepairTracker
         }
         protected override void OnConfiguring(DbContextOptionsBuilder options)
         {
-            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=JDMRepair;Trusted_Connection=True;");
+            options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CarRepair;Trusted_Connection=True;");
         }
+
+        public DbSet<Vehicle> Vehicles { get; set; }
     }
 }
