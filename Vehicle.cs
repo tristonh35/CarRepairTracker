@@ -9,15 +9,15 @@ namespace CarRepairTracker
 {
     public class Vehicle
     {   
-        [Key] // Tells EF core to make this a (PK)
-        public int Id { get; set; }
-        /// <summary>
-        /// No arg constructor for the vehicle class
-        /// </summary>
         public Vehicle() { }
         /// <summary>
         /// Represents the make of the vehicle
         /// </summary>
+        /// 
+        [Key] // Tells EF core to make this a (PK)
+        public int Id { get; set; }
+
+
         public string Make { get; set; }
         /// <summary>
         /// Represents the model of the vehicle

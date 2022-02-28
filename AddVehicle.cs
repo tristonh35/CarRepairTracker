@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.EntityFrameworkCore;
+using CarRepairTracker.Migrations;
 
 namespace CarRepairTracker
 {
@@ -139,8 +141,9 @@ namespace CarRepairTracker
 
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
+            VehicleContext dbContext = new VehicleContext();
             Vehicle vehicle = new Vehicle();
-            if(checkBox1.Checked == true)
+            if (checkBox1.Checked == true)
             {
                 vehicle.Model = checkBox1.Text;
             }
@@ -197,7 +200,8 @@ namespace CarRepairTracker
             {
                 vehicle.Year = Convert.ToInt32(CBYear.Text);
             }
-
+            dbContext.Vehicles.Add(vehicle);
+            dbContext.SaveChanges();
         }
 
         private void TxtVin_TextChanged(object sender, EventArgs e)
