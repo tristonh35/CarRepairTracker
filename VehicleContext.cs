@@ -18,6 +18,7 @@ namespace CarRepairTracker
             options.UseSqlServer("Server=(localdb)\\mssqllocaldb;Database=CarRepair;Trusted_Connection=True;");
         }
 
+        // Puts vehicles in the database
         public DbSet<Vehicle> Vehicles { get; set; }
     }
 }
