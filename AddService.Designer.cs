@@ -139,7 +139,6 @@
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Name = "AddService";
             this.Text = "Add Service";
-            this.Load += new System.EventHandler(this.AddService_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
