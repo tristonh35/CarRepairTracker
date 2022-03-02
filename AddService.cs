@@ -17,30 +17,19 @@ namespace CarRepairTracker
             InitializeComponent();
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void addServiceBtn_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void AddService_Load(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void clearBtn_Click(object sender, EventArgs e)
         {
-            descriptionBox.Text = "";
-            serviceTitleBox.Text = "";
+            descriptionBox.Clear();
+            serviceTitleBox.Clear();
         }
     }
 }
