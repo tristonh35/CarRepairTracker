@@ -31,5 +31,7 @@ namespace CarRepairTracker
             descriptionBox.Clear();
             serviceTitleBox.Clear();
         }
+
+       
     }
 }

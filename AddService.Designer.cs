@@ -47,7 +47,6 @@
             this.addServiceBtn.TabIndex = 0;
             this.addServiceBtn.Text = "Add Service To Vehicle";
             this.addServiceBtn.UseVisualStyleBackColor = true;
-            this.addServiceBtn.Click += new System.EventHandler(this.addServiceBtn_Click);
             // 
             // descriptionBox
             // 
@@ -66,7 +65,6 @@
             this.label1.Size = new System.Drawing.Size(136, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Service Description";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // clearBtn
             // 
