@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,13 +9,15 @@ namespace CarRepairTracker
 {
     public class Vehicle
     {   
-        /// <summary>
-        /// No arg constructor for the vehicle class
-        /// </summary>
         public Vehicle() { }
         /// <summary>
         /// Represents the make of the vehicle
         /// </summary>
+        /// 
+        [Key] // Tells EF core to make this a (PK)
+        public int Id { get; set; }
+
+
         public string Make { get; set; }
         /// <summary>
         /// Represents the model of the vehicle
@@ -79,12 +82,5 @@ namespace CarRepairTracker
         {
             return VIN;
         }
-
-
-
     }
-    
-
-
-
 }
