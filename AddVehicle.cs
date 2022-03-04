@@ -199,10 +199,11 @@ namespace CarRepairTracker
                 {
                     vehicle.Year = Convert.ToInt32(CBYear.Text);
                 }
-
+                vehicle.VIN = TxtVin.Text;
 
                 dbContext.Vehicles.Add(vehicle);
                 dbContext.SaveChanges();
+                MessageBox.Show("Vehicle successfully added!");
                 
             }
             
