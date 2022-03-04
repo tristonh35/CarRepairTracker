@@ -101,7 +101,7 @@
             this.CBYear.Name = "CBYear";
             this.CBYear.Size = new System.Drawing.Size(121, 23);
             this.CBYear.TabIndex = 4;
-            this.CBYear.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
             // 
             // RdbHonda
             // 
@@ -169,7 +169,6 @@
             this.TxtVin.Name = "TxtVin";
             this.TxtVin.Size = new System.Drawing.Size(254, 23);
             this.TxtVin.TabIndex = 10;
-            this.TxtVin.TextChanged += new System.EventHandler(this.TxtVin_TextChanged);
             // 
             // BtnSubmit
             // 
