@@ -8,7 +8,7 @@ Upon completion, this app will function to serve as a vehicle repair tracker. Us
 
 # Getting started
 This program is written in c# and uses the entity framework core for the database side of things. 
-Link for .NET 6.0 ![](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+For starters, you need [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 You must also install these Nuget Packages: Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer, and Microsoft.EntityFrameworkCore.Tools
 from the Nuget package manager.
