@@ -101,7 +101,7 @@
             this.CBYear.Name = "CBYear";
             this.CBYear.Size = new System.Drawing.Size(121, 23);
             this.CBYear.TabIndex = 4;
-            this.CBYear.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+           
             // 
             // RdbHonda
             // 

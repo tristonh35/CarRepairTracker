@@ -20,20 +20,7 @@ namespace CarRepairTracker
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void CBMake_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void RdbHonda_CheckedChanged(object sender, EventArgs e)
         {
@@ -216,6 +203,7 @@ namespace CarRepairTracker
 
                 dbContext.Vehicles.Add(vehicle);
                 dbContext.SaveChanges();
+                
             }
             
             
