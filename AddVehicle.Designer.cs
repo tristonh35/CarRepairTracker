@@ -169,7 +169,6 @@
             this.TxtVin.Name = "TxtVin";
             this.TxtVin.Size = new System.Drawing.Size(254, 23);
             this.TxtVin.TabIndex = 10;
-            this.TxtVin.TextChanged += new System.EventHandler(this.TxtVin_TextChanged);
             // 
             // BtnSubmit
             // 

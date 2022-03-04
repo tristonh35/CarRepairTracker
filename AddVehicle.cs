@@ -17,6 +17,7 @@ namespace CarRepairTracker
         public AddVehicle()
         {
             InitializeComponent();
+
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
@@ -139,78 +140,87 @@ namespace CarRepairTracker
             }
         }
 
+        
+            
+
+
+       
         private void BtnSubmit_Click(object sender, EventArgs e)
         {
             VehicleContext dbContext = new VehicleContext();
             Vehicle vehicle = new Vehicle();
-            if (checkBox1.Checked == true)
-            {
-                vehicle.Model = checkBox1.Text;
-            }
-            if(checkBox2.Checked == true)
-            {
-                vehicle.Model = checkBox2.Text;
-            }
-            if (checkBox3.Checked == true)
-            {
-                vehicle.Model = checkBox3.Text;
-            }
-            if (checkBox4.Checked == true)
-            {
-                vehicle.Model = checkBox4.Text;
-            }
             int length = TxtVin.Text.Length;
-
-            if (length == 17)
+            if (!checkBox1.Checked && !checkBox2.Checked && !checkBox3.Checked && !checkBox4.Checked ||
+                !RdbHonda.Checked && !RdbMazda.Checked && !RdbNissan.Checked && !RdbSubaru.Checked && !RdbToyota.Checked) 
             {
-                BtnSubmit.Enabled = true;
-                vehicle.VIN = TxtVin.Text;
+                MessageBox.Show("Please select a Make and Model");
             }
-            if (length > 17 || length < 17)
-            {
-                BtnSubmit.Enabled = false;
-            }
-            
-            if (RdbHonda.Checked == true)
-            {
-                vehicle.Make = RdbHonda.Text;
-            }
-            if (RdbToyota.Checked == true)
-            {
-                vehicle.Make = RdbToyota.Text;
-            }
-            if (RdbSubaru.Checked == true)
-            {
-                vehicle.Make = RdbSubaru.Text;
-            }
-            if (RdbMazda.Checked == true)
-            {
-                vehicle.Make = RdbMazda.Text;
-            }
-            if (RdbNissan.Checked == true)
-            {
-                vehicle.Make = RdbNissan.Text;
-            }
-
             if (CBYear.Text == "")
             {
-                BtnSubmit.Enabled = false;
+                MessageBox.Show("Please select a year");
             }
-            if (CBYear.Text != "")
+            if(length < 17 || length > 17)
             {
-                vehicle.Year = Convert.ToInt32(CBYear.Text);
+                MessageBox.Show("Vin must be 17 characters");
             }
-            dbContext.Vehicles.Add(vehicle);
-            dbContext.SaveChanges();
+            else
+            {
+                if (checkBox1.Checked == true)
+                {
+                    vehicle.Model = checkBox1.Text;
+                }
+                if (checkBox2.Checked == true)
+                {
+                    vehicle.Model = checkBox2.Text;
+                }
+                if (checkBox3.Checked == true)
+                {
+                    vehicle.Model = checkBox3.Text;
+                }
+                if (checkBox4.Checked == true)
+                {
+                    vehicle.Model = checkBox4.Text;
+                }
+
+                if (RdbHonda.Checked == true)
+                {
+                    vehicle.Make = RdbHonda.Text;
+                }
+                if (RdbToyota.Checked == true)
+                {
+                    vehicle.Make = RdbToyota.Text;
+                }
+                if (RdbSubaru.Checked == true)
+                {
+                    vehicle.Make = RdbSubaru.Text;
+                }
+                if (RdbMazda.Checked == true)
+                {
+                    vehicle.Make = RdbMazda.Text;
+                }
+                if (RdbNissan.Checked == true)
+                {
+                    vehicle.Make = RdbNissan.Text;
+                }
+
+                if (CBYear.Text == "")
+                {
+                    BtnSubmit.Enabled = false;
+
+                }
+                if (CBYear.Text != "")
+                {
+                    vehicle.Year = Convert.ToInt32(CBYear.Text);
+                }
+
+
+                dbContext.Vehicles.Add(vehicle);
+                dbContext.SaveChanges();
+            }
+            
+            
         }
 
-        private void TxtVin_TextChanged(object sender, EventArgs e)
-        {
-            int length = TxtVin.Text.Length;
-            if (length == 17)
-            {
-                BtnSubmit.Enabled = true;
-            }
-        }
+       
     }
 }
