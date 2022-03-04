@@ -9,7 +9,8 @@ namespace CarRepairTracker
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            ShowReport showReport = new ShowReport();
+            showReport.Show();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
