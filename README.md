@@ -13,6 +13,8 @@ For starters, you need [.NET 6.0](https://dotnet.microsoft.com/en-us/download/do
 You must also install these Nuget Packages: Microsoft.EntityFrameworkCore, Microsoft.EntityFrameworkCore.SqlServer, and Microsoft.EntityFrameworkCore.Tools
 from the Nuget package manager.
 
+Once everything is properly installed, make sure to use code first migrations on your end. (Add-Migration "......" and Update-Database are the commands you will want to use.
+
 # Main Page
 ![](https://github.com/tristonh35/CarRepairTracker/blob/master/images/main%20page%20project.png)
 # Add Vehicle Page
