@@ -82,5 +82,10 @@ namespace CarRepairTracker
         {
             return VIN;
         }
+
+        public string toString(string make, string model, int year, string vin)
+        {
+            return year + "" + make + "" + model + ", " + vin;
+        }
     }
 }

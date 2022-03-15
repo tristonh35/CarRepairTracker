@@ -101,7 +101,6 @@
             this.CBYear.Name = "CBYear";
             this.CBYear.Size = new System.Drawing.Size(121, 23);
             this.CBYear.TabIndex = 4;
-           
             // 
             // RdbHonda
             // 
@@ -244,6 +243,7 @@
             this.Controls.Add(this.yearLabel);
             this.Name = "AddVehicle";
             this.Text = "Add Vehicle";
+            this.Load += new System.EventHandler(this.AddVehicle_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
