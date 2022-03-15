@@ -20,5 +20,8 @@ namespace CarRepairTracker
 
         // Puts vehicles in the database
         public DbSet<Vehicle> Vehicles { get; set; }
+
+        // Puts Service Records in the database
+        public DbSet<Services> Service { get; set; }
     }
 }
