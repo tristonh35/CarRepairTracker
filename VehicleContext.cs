@@ -25,7 +25,7 @@ namespace CarRepairTracker
 
         // Puts Service Records in the database
         public DbSet<Services> Service { get; set; }
-=======
+
         public static SqlDataReader DataSource { get; internal set; }
 
     }
