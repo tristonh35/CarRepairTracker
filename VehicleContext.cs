@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.Data.SqlClient;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,5 +21,6 @@ namespace CarRepairTracker
 
         // Puts vehicles in the database
         public DbSet<Vehicle> Vehicles { get; set; }
+        public static SqlDataReader DataSource { get; internal set; }
     }
 }

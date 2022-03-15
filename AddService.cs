@@ -1,6 +1,8 @@
-﻿using System;
+﻿using Microsoft.Data.SqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Linq;
@@ -15,11 +17,14 @@ namespace CarRepairTracker
         public AddService()
         {
             InitializeComponent();
+            
         }
 
-        
+    
 
-        private void exitBtn_Click(object sender, EventArgs e)
+
+
+    private void exitBtn_Click(object sender, EventArgs e)
         {
             this.Close();
         }
@@ -32,6 +37,9 @@ namespace CarRepairTracker
             serviceTitleBox.Clear();
         }
 
-       
+        private void AddService_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

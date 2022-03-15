@@ -219,6 +219,9 @@ namespace CarRepairTracker
             
         }
 
-       
+        private void AddVehicle_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
